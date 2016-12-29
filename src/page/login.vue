@@ -22,7 +22,7 @@
       </section>
     </div>
     <div slot="button">
-      <mu-raised-button :label="submitTitle" :disabled="submitTag" class="demo-raised-button" fullWidth primary/>
+      <mu-raised-button :label="submitTitle" :disabled="submitTag" @click="submit" fullWidth primary/>
     </div>
   </userBase>
 </template>
@@ -34,7 +34,7 @@ import userBase from '../components/user-base';
             return {
                 username: '',
                 password: '',
-                submitTag: true,
+                submitTag: false,
                 loginTag: false,
                 submitTitle:'登录'
             }
@@ -47,7 +47,7 @@ import userBase from '../components/user-base';
             this.$router.push({path:'forget'});
           },
           submit(){
-            console.log(11);
+            this.$router.push({path:'index'});
           }
         },
       components:{

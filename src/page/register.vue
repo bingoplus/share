@@ -22,6 +22,8 @@
     </div>
     <div slot="button">
       <mu-raised-button :label="submitTitle" :disabled="submitTag" class="demo-raised-button" fullWidth primary/>
+      <mu-divider />
+      <mu-flat-button label="登录" @click="turnLogin" class="inner-login"/>
     </div>
   </userBase>
 </template>
@@ -45,6 +47,9 @@
     methods:{
       submit(){
         console.log(11);
+      },
+      turnLogin(){
+        this.$router.push({path:'/login'});
       }
     },
     components:{

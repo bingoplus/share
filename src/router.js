@@ -7,6 +7,7 @@
 import login from './page/login';
 import register from './page/register';
 import forget from './page/forget';
+import index from './page/index';
 export default {
   mode:'history',
   linkActiveClass: 'active',
@@ -23,6 +24,10 @@ export default {
     {
       path:'/forget',
       component:forget
+    },
+    {
+      path:'/index',
+      component:index
     },
     {
       path:'*',
