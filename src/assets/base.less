@@ -132,20 +132,43 @@ a,a:hover,a:active {
     background-color: #FFF;
   }
 }
-.demo-popup-left {
-  display: flex;
-  width: 85%;
-  max-width: 375px;
-  height: 100%;
-  align-items: center;
-  padding: 24px;
-}
 .index {
-  dispaly: flex;
+  display: flex;
 }
 .index-left {
-  width: 30%;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  overflow-y: auto;
+  transition: all 1s;
+  border-right: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  .index-title {
+    line-height: 63px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    color: #03a9f4;
+    transition: all 1s;
+    box-shadow: 0 1px 6px rgba(0,0,0,.117647), 0 1px 4px rgba(0,0,0,.117647);
+  }
 }
 .index-right {
-  width: 70%;
+  width: 80%;
+  left: 20%;
+  position: absolute;
+  transition: all 1s;
+}
+.index-left-hidden {
+  width: 0;
+  transition: all 1s;
+}
+.index-right-hidden {
+  width: 100%;
+  left: 0;
+  transition: all 1s;
+}
+.index-hidden {
+  display: none!important;
+  transition: all 1s;
 }
