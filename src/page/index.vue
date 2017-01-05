@@ -34,9 +34,9 @@
       </div>
       <div class="index-right-bottom">
         <mu-tabs :value="activeTab" @change="handleTabChange">
-          <mu-tab value="tab1" title="TAB ONE"/>
-          <mu-tab value="tab2" title="TAB TWO"/>
-          <mu-tab value="tab3" title="TAB ACTIVE"/>
+          <mu-tab value="tab1" title="收录内容"/>
+          <mu-tab value="tab2" title="学习资源"/>
+          <mu-tab value="tab3" title="知识图谱"/>
         </mu-tabs>
         <div v-if="activeTab === 'tab1'">
           <h2>Tab One</h2>

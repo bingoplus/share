@@ -45,6 +45,14 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          'postcss-loader'
+        ]
+      },
+      {
         test: /\.json$/,
         loader: 'json'
       },
@@ -67,7 +75,7 @@ module.exports = {
     ]
   },
   vue: {
-    loaders: utils.cssLoaders({ sourceMap: useCssSourceMap }),
+    loaders: utils.cssLoaders(),
     postcss: [
       require('autoprefixer')({
         browsers: ['last 7 versions']
