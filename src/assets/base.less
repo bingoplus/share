@@ -137,6 +137,8 @@ a,a:hover,a:active {
   overflow: hidden;
 }
 .index-left {
+  display: block;
+  left: 0;
   width: 320px;
   height: 100%;
   position: fixed;
@@ -150,7 +152,6 @@ a,a:hover,a:active {
     font-weight: 700;
     font-size: 24px;
     color: #03a9f4;
-    transition: all 1s;
     box-shadow: 0 1px 6px rgba(0,0,0,.117647), 0 1px 4px rgba(0,0,0,.117647);
   }
 }
@@ -161,16 +162,13 @@ a,a:hover,a:active {
   transition: all 1s;
 }
 .index-left-hidden {
-  width: 0;
+  //width: 0;
+  left: -320px;
   transition: all 1s;
 }
 .index-right-hidden {
   width: 100%;
   left: 0;
-  transition: all 1s;
-}
-.index-hidden {
-  display: none!important;
   transition: all 1s;
 }
 .index-right-bottom {
@@ -191,4 +189,8 @@ a,a:hover,a:active {
   .mu-tab-link-highlight {
     background-color: #03a9f4!important;
   }
+}
+.index-user {
+  text-align: center;
+  margin: 25px auto 10px auto;
 }

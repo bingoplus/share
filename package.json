@@ -12,7 +12,8 @@
     "keycode": "^2.1.8",
     "muse-ui": "^2.0.0-beta.4",
     "style-loader": "^0.13.1",
-    "vue": "^2.1.7"
+    "vue": "^2.1.7",
+    "vue2.x-core-image-upload": "^0.9.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",

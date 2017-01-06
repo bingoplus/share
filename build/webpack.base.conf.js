@@ -44,14 +44,14 @@ module.exports = {
         include: projectRoot,
         exclude: /node_modules/
       },
-      {
+      /*{
         test: /\.css$/,
         loaders: [
           'style-loader',
           'css-loader?importLoaders=1',
           'postcss-loader'
         ]
-      },
+      },*/
       {
         test: /\.json$/,
         loader: 'json'

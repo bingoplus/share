@@ -7,12 +7,12 @@
  <template>
  <div class="index">
     <div class="index-left" :class="{'index-left-hidden': show }">
-      <div class="index-title"  :class="{'index-hidden': show }">寻道科技技术小组</div>
+      <div class="index-title">寻道科技技术小组</div>
       <div class="index-user">
-        hello
+        <mu-circular-progress mode="determinate" :size="90" :value="level"/>
       </div>
       <mu-list :value="value" @change="handleChange">
-        <mu-list-item v-for="(list,index) in lists" :title="list.title" toggleNested>
+        <mu-list-item v-for="(list,index) in lists" :value="list.subTitles.indexOf(value)>-1 ? value : list.title" :title="list.title" toggleNested>
           <mu-icon slot="left" :value="icons[index]" />
           <mu-list-item v-for="(subTitle,index) in list.subTitles" slot="nested" :value="subTitle" :title="subTitle">
             <mu-icon slot="left" value="label_outline"/>
@@ -67,6 +67,7 @@
  			username: '飞鸟',
  			show: false,
  			open: false,
+ 			level: 80,
  			value:"Angular",
  			activeTab: 'tab1',
  			icons:["computer","swap_vert","storage","keyboard","cloud_done"],
@@ -80,6 +81,11 @@
  		}
  	},
  	methods:{
+ 	    imageUploaded(res) {
+        if (res.errcode == 0) {
+          this.src = 'http://img1.vued.vanthink.cn/vued751d13a9cb5376b89cb6719e86f591f3.png';
+        }
+      },
  	    toggleMenu(){
  			  this.show = !this.show;
  		  },
